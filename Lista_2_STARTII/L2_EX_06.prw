@@ -1,26 +1,24 @@
 #INCLUDE 'TOTVS.CH'
 
 /*
-• 6 – Efetuar a leitura de quatro números inteiros e
-apresentar os números que são divisíveis por 2 e 3.
+â€¢ 6 â€“ Efetuar a leitura de quatro nÃºmeros inteiros e
+apresentar os nÃºmeros que sÃ£o divisÃ­veis por 2 e 3.
 */
 
 User Function DivisivelDoisTres()
 
     Local nCont := 0, nNumInt := 0 
-    Local aArmazena := ''
+    Local cArmazena := ''
 
     for nCont := 1 to 4
-        nNumInt   := VAL(FwInputBox('Digite um número inteiro: '))
-        if nNumInt % 2 == 0
-            aArmazena+= ('O número ' + ALLTRIM(STR(nNumInt)) + ' é divisível por 2') + CRLF 
-        elseif nNumInt % 3 == 0
-            aArmazena+= ('O número ' + ALLTRIM(STR(nNumInt)) + ' é divisível por 3') + CRLF 
+        nNumInt   := VAL(FwInputBox('Digite um nÃºmero inteiro: '))
+        if nNumInt % 2 == 0 .and.  nNumInt % 3 == 0
+            cArmazena+= ('O nÃºmero ' + ALLTRIM(STR(nNumInt)) + ' Ã© divisÃ­vel por 2 e 3') + CRLF 
         else
-            aArmazena+= ('O número ' + ALLTRIM(STR(nNumInt)) + ' não divisível por 2 ou 3') + CRLF 
+            cArmazena+= ('O nÃºmero ' + ALLTRIM(STR(nNumInt)) + ' nÃ£o divisÃ­vel por 2 ou 3') + CRLF 
         endif
     next
 
-    FwAlertInfo(aArmazena) 
+    FwAlertInfo(cArmazena) 
 
 Return
