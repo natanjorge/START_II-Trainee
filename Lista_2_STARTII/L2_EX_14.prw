@@ -1,35 +1,38 @@
 #INCLUDE 'TOTVS.CH'
 
 /*
-ï 14 - FaÁa um programa que calcule a somatÛria dos
-"n" primeiros n˙meros naturais pares ou Ìmpares.
-O usu·rio informar· atravÈs de digitaÁ„o a
-quantidade de n˙meros desejada ("n") e escolher·
-entre par ou Ìmpar.
+‚Ä¢ 14 - Fa√ßa um programa que calcule a somat√≥ria dos
+"n" primeiros n√∫meros naturais pares ou √≠mpares.
+O usu√°rio informar√° atrav√©s de digita√ß√£o a
+quantidade de n√∫meros desejada ("n") e escolher√°
+entre par ou √≠mpar.
 
 */
 
-
 User Function ParOuImpar()
 
-    Local nCont:=0, nLimite := 0
-    Local cPar := '', cImpar := '',cEscolha:=''
+    Local nCont:=0, nLimite := 0, nArmazena:=0
+    Local cPar := '', cImpar := '',cEscolha:='', cArmazena:=''
 
-    nLimite := VAL(FwInputBox('Digite o limite de n˙meros que deseja: '))
+    nLimite := VAL(FwInputBox('Digite o limite de n√∫meros que deseja: '))
 
     for nCont := 1 to nLimite
         if nCont % 2 == 0
-            cPar += 'Os n˙meros pares s„o: '+ALLTRIM(STR(nCont)) + ' | '+CRLF
+            cPar += 'Os n√∫meros pares s√£o: '+ALLTRIM(STR(nCont)) + ' | '+CRLF
+            nArmazena+=nCont
+            cArmazena:= 'A somat√≥ria dos valores √©: '+ALLTRIM(STR(nArmazena)) + ' | '+CRLF
         else
-            cImpar += 'Os n˙meros impares s„o: '+ALLTRIM(STR(nCont)) + ' | '+CRLF
+            cImpar += 'Os n√∫meros impares s√£o: '+ALLTRIM(STR(nCont)) + ' | '+CRLF
+            nArmazena+=nCont
+            cArmazena:= 'A somat√≥ria dos valores √©: '+ALLTRIM(STR(nArmazena)) + ' | '+CRLF       
         endif
     NEXT
 
-    cEscolha := FwInputBox('Digite se deseja saber os n˙meros Pares ou Impares (P/I): ')
+    cEscolha := FwInputBox('Digite se deseja saber os n√∫meros Pares ou Impares (P/I): ')
     if UPPER(cEscolha)  == 'P'
-        FwAlertInfo(cPar)
+        FwAlertInfo(cPar+cArmazena)
     elseif UPPER(cEscolha) == 'I'
-        FwAlertInfo(cImpar)
+        FwAlertInfo(cImpar+cArmazena)
     endif
 
 Return
