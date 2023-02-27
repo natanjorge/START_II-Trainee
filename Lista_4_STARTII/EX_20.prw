@@ -1,22 +1,21 @@
 #INCLUDE 'PROTHEUS.CH'
  
 /*
-• 20 – Altere a rotina do exercício 17 para que no
+â€¢ 20 â€“ Altere a rotina do exercÃ­cio 17 para que no
 browse do cadastro de alunos sejam
 apresentadas legendas da seguinte forma:
 o Alunos com mais de 18 anos:
 ? Legenda Verde
 o Alunos com menos de 18 anos:
 ? Legenda Vermelha
-
 */
 
 User Function CadZZ2()
 
     Local cAlias := 'ZZ2',  cFiltro   := ''
 
-    Local aCores := { { 'ZZ2->ZZ2_DATMAT < Date()-6570' , 'ENABLE' },; // 6570 dias = 8 anos
-                      { 'ZZ2->ZZ2_DATMAT > Date()-6570' , 'DISABLE' } }
+    Local aCores := { { 'ZZ2->ZZ2_DATNAS < Date()-6570' , 'ENABLE' },; // 6570 dias = 8 anos
+                      { 'ZZ2->ZZ2_DATNAS > Date()-6570' , 'DISABLE' } }
 
     Private cCadastro := 'Cadastro de alunos '
     Private aRotina := {{ 'Pesquisar' ,    'AxPesqui' ,     0, 1 },;
