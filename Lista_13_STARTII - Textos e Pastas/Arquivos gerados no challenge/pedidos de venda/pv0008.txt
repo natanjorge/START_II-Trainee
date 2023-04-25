@@ -1,0 +1,10 @@
+LOG DO PEDIDO DE VENDA!
+
+[23:14:25]Consulta no banco de dados realizada com sucesso!
+[23:14:25]Criação da pasta realizada com sucesso!
+[23:14:25]Fontes definidas para o relatório são válidas!
+[23:14:25]Criação do cabeçalho realizada com sucesso!
+[23:14:25]Criação do rodapé realizada com sucesso!
+[23:14:25]Impressão dos dados do rodapé realizada com sucesso!
+[23:14:25]Impressão dos dados do cabeçalho realizada com sucesso!
+[23:14:25]Geração do log realizada com sucesso!
