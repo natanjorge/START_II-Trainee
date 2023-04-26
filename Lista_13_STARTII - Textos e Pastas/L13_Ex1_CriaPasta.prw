@@ -1,14 +1,14 @@
 #INCLUDE 'TOTVS.CH'
 
 /*/{Protheus.doc} User Function CriaPasta
-  Função para criar pastas no arquivo temporário
+  FunÃ§Ã£o para criar pastas no arquivo temporÃ¡rio
   @type  Function
   @author Natan Jorge
   @since 24/04/2023
   /*/
 User Function CriaPasta()
   Local cCaminho   := GetTempPath()
-  Local cNomePasta := 'Lista 13 – Ex1\'
+  Local cNomePasta := 'Lista 13 â€“ Ex1\'
 
   if !ExistDir(cCaminho + cNomePasta)
     if MakeDir(cCaminho + cNomePasta) == 0 
@@ -16,11 +16,11 @@ User Function CriaPasta()
         ExecBlock('EscreveTxt', .F., .F., cCaminho + cNomePasta)
       endif
     else
-      FwAlertError('Houve um erro ao criar a pasta ' + cNomePasta, 'Atenção')
+      FwAlertError('Houve um erro ao criar a pasta ' + cNomePasta, 'AtenÃ§Ã£o')
     endif
   else
-    if ExistBlock('Escreve')
-      ExecBlock('Escreve', .F., .F., cCaminho + cNomePasta)
+    if ExistBlock('EscreveTxt')
+      ExecBlock('EscreveTxt', .F., .F., cCaminho + cNomePasta)
     endif
   endif
 Return
